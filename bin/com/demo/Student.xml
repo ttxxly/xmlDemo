@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?><!-- xml文件的声明 -->
+<!DOCTYPE students SYSTEM "student.dtd"><!-- 引用外部的dtd校验文件 -->
+<students>
+	<student stuNO="STU0001">
+		<name>关羽</name>
+		<age>20</age>
+		<sex>男</sex>
+		<birth>1988-10-29</birth>
+		<email value="guanyu@qq.com" />
+		<student stuNO="SUT11001">
+			<name>关羽</name>
+			<age>20</age>
+			<sex value="女">男</sex>
+			<birth>1988-10-29</birth>
+			<email value="guanyu@qq.com" />
+		</student>
+	</student>
+
+	<student stuNO="STU0002">
+		<name>李四</name>
+		<age>20</age>
+		<sex>男</sex>
+		<birth>1988-10-29</birth>
+		<phone>123332</phone>
+		<email value="guanyu@qq.com" ></email>
+	</student>
+
+	<student stuNO="STU0003">
+		<name>貂蝉</name>
+		<age>20</age>
+		<sex>女</sex>
+		<birth>1988-10-29</birth>
+		<phone>123332</phone>
+		<phone>123332</phone>
+		<!-- <email value="guanyu@qq.com" >fdfj</email> -->
+	</student>
+
+	<cat>
+		<sex>母</sex>
+		<age>3</age>
+		<name>喵喵</name>
+	</cat>
+	<cat>
+		<sex>母</sex>
+		<age>3</age>
+		<name>喵喵</name>
+	</cat>
+</students>

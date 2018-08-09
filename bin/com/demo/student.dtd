@@ -1,0 +1,18 @@
+<!--
+		<!ELEMENT 元素(子元素,...)>
+	-->
+	<!ELEMENT students (student+,cat*) >
+	<!ELEMENT student (name,age,sex,birth,phone*,email?,student?) ><!-- 注意元素的顺序 -->
+	<!ELEMENT email EMPTY><!-- 元素里面不能包含内容 -->
+	<!ELEMENT phone (#PCDATA)>
+	<!ATTLIST sex value (男|女|保密) "男"><!-- 属性值可以使用枚举类型 -->
+	<!-- 
+		定义student元素的stuNo属性 
+		ID类型: 保证唯一性(必须由数字和字母组成)
+		CDATA类型: 指定是字符串类型
+		
+		#REQUIRED 属性值是必须
+		#IMPLIED  属性值是可选
+	-->
+	<!ATTLIST student stuNO ID #IMPLIED>
+	<!ATTLIST email value CDATA #IMPLIED>

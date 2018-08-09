@@ -1,0 +1,18 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+<note xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="abc"
+	  xsi:schemaLocation="abc note.xsd" one="属于note">
+	  
+	<to two="to的属性">
+		<content>fdsf</content>
+		<content>fdsf</content>
+		<content>fsdf</content>
+	</to>
+	<from>John</from>
+	<heading>Reminder</heading>
+	<body>Don't forget the meeting!</body>
+	<age>20</age>
+	<birth>1988-10-23</birth>
+	<sex>人妖</sex>
+	<weight>75</weight>
+</note>

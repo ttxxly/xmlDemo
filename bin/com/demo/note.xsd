@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="abc" xmlns="abc" elementFormDefault="qualified">
+	<!-- XML Schema 缩写 当elementFormDefault="qualified" 时，所有全局元素的子元素将被以缺省方式放到目标命名空间，连同全局元素或者类型一起； 
+		而当elementFormDefault="unqualified" 时，所有全局元素的子元素将被以缺省方式放到无名命名空间。而属性的命名空间类似地由attributeFormDefault="？"来指明。 
+		需要明白的是，elementFormDefault="？" 是有作用域的，并且是被继承的，除非在子定义中覆盖父定义。 -->
+	<xsd:element name="note">
+		
+        <xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="to">
+					<xsd:complexType mixed="true"><!-- 混合 -->
+						<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+							<xsd:element name="content" type="xsd:string" />
+						</xsd:sequence>
+						<xsd:attribute name="two" type="xsd:string" use="required" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="from" type="xsd:string" />
+				<xsd:element name="heading" type="xsd:string" />
+				<xsd:element name="body" type="xsd:string" />
+				<xsd:element name="age" type="xsd:integer" />
+				<xsd:element name="birth" type="xsd:date" />
+				<xsd:element name="sex">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="男" />
+							<xsd:enumeration value="女" />
+							<xsd:enumeration value="人妖" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="weight" type="xsd:decimal" />
+			</xsd:sequence>
+			<xsd:attribute name="one" type="xsd:string" use="required" />
+		</xsd:complexType>
+    </xsd:element>
+</xsd:schema>
